@@ -1,0 +1,4 @@
+name: Bungeecord Server Tab
+version: ${project.version}
+main: com.weirtz.bungeecordservertab.Main
+description: Custom server tab menus for bungeecord servers.
