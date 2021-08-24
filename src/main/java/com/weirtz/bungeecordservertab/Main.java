@@ -1,17 +1,13 @@
 package com.weirtz.bungeecordservertab;
-import net.md_5.bungee.api.config.ServerInfo;
-import net.md_5.bungee.api.Callback;
+
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.chat.ComponentBuilder;
-import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
-import org.yaml.snakeyaml.error.YAMLException;
 
 public final class Main extends Plugin implements Listener {
 
@@ -27,47 +23,21 @@ public final class Main extends Plugin implements Listener {
         // Plugin shutdown logic
     }
 
-    public String load(){
-        boolean disabled;
-        try {
-
-            return "azd";
-
-        } catch (YAMLException e){
-            System.out.print("Failed to start plugin: Broken Config File. "+ e);
-            disabled = true;
-            return "Failed to start plugin: Broken Config File.\n";
-        } catch (Exception e){
-            System.out.print("Failed to start plugin: Internal Error: "+ e);
-            disabled = true;
-            return "Failed to start plugin: Internal Error.\n";
-        }
-    }
-
     @EventHandler
-    public void onPostLogin(PostLoginEvent event){
+    public void onPostLogin(final PostLoginEvent event){
         ProxiedPlayer player = event.getPlayer();
 
         player.setTabHeader(
-                //Header
-                new ComponentBuilder("FintieSkies - ").color(ChatColor.RED).bold(true)
-                        .append("MC.FINITESKIES.COM").bold(false).color(ChatColor.GREEN).create(),
-                //Footer
-                new ComponentBuilder("Visit us at finiteskies.com").create() // Empty footer
+                //Set Header
+                new ComponentBuilder(" \n").color(ChatColor.WHITE)
+                        .append("You're playing on ").color(ChatColor.GOLD)
+                        .append("MC.FINITESKIES.COM").bold(true).color(ChatColor.LIGHT_PURPLE)
+                        .append(" \n").bold(false).color(ChatColor.WHITE).create(),
+                //Set Footer
+                new ComponentBuilder("Visit us at ").color(ChatColor.WHITE)
+                        .append( "finiteskies.com ").color(ChatColor.LIGHT_PURPLE).bold(true)
+                        .append("for awesome perks!").color(ChatColor.WHITE).bold(false).create()
         );
 
     }
-
-    public String getServerName(){
-        ProxyServer.getServerInfo("serverName").ping(callback);
-    }
-
-    Callback<ServerPing> callback = new Callback<ServerPing>() {
-        @Override
-        public void done(ServerPing result, Throwable error) {
-            String motd = TextComponent.toLegacyText(result.getDescriptionComponent());
-        }
-    };
-
-
 }
