@@ -9,11 +9,15 @@ import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.event.EventHandler;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+import java.util.regex.Pattern;
+
 public final class Main extends Plugin implements Listener {
 
     @Override
     public void onEnable() {
-
         //Register listener for player login events.
         ProxyServer.getInstance().getPluginManager().registerListener(this,this);
     }
@@ -22,6 +26,8 @@ public final class Main extends Plugin implements Listener {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+
 
     @EventHandler
     public void onPostLogin(final PostLoginEvent event){
@@ -32,11 +38,15 @@ public final class Main extends Plugin implements Listener {
                 new ComponentBuilder(" \n").color(ChatColor.WHITE)
                         .append("You're playing on ").color(ChatColor.GOLD)
                         .append("MC.FINITESKIES.COM").bold(true).color(ChatColor.LIGHT_PURPLE)
-                        .append(" \n").bold(false).color(ChatColor.WHITE).create(),
+                        .append(" \n").bold(false).color(ChatColor.WHITE)
+                        .create(),
                 //Set Footer
-                new ComponentBuilder("Visit us at ").color(ChatColor.WHITE)
+                new ComponentBuilder(" \n").color(ChatColor.WHITE)
+                        .append( "Visit us at ").color(ChatColor.WHITE)
                         .append( "finiteskies.com ").color(ChatColor.LIGHT_PURPLE).bold(true)
-                        .append("for awesome perks!").color(ChatColor.WHITE).bold(false).create()
+                        .append("for awesome perks!").color(ChatColor.WHITE).bold(false)
+                        .append(" \n").color(ChatColor.WHITE)
+                        .create()
         );
 
     }
