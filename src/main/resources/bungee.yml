@@ -1,4 +1,4 @@
-name: Bungeecord Server Tab
+name: Bungeecord Multi-Tool
 version: ${project.version}
-main: com.weirtz.bungeecordservertab.Main
-description: Custom server tab menus for bungeecord servers.
+main: com.weirtz.bungeecordmultitool.Main
+description: An assortment of bungeecord server features.

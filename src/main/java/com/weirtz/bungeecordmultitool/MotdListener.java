@@ -1,4 +1,4 @@
-package com.weirtz.bungeecordservertab;
+package com.weirtz.bungeecordmultitool;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ServerPing;
@@ -11,20 +11,15 @@ import net.md_5.bungee.event.EventHandler;
 
 public class MotdListener implements Listener {
     @EventHandler
-    public void onPing(ProxyPingEvent e){
-        ServerPing serverPing = e.getResponse();
+    public void onPing(ProxyPingEvent event){
+        ServerPing serverPing = event.getResponse();
 
         final BaseComponent[] bungee = new ComponentBuilder("                FiniteSkies Network ").color(ChatColor.LIGHT_PURPLE)
                 .append("[").color(ChatColor.GRAY).append("1.17").color(ChatColor.WHITE).append("]\n").color(ChatColor.GRAY)
                 .append("              MC.FINITESKIES.COM").bold(true).color(ChatColor.GOLD)
                 .create();
 
-        TextComponent message = new TextComponent( "Hello world" );
-        message.setColor( ChatColor.RED );
-        message.setBold( true );
-
         serverPing.setDescriptionComponent(new TextComponent(bungee));
-//        serverPing.setDescriptionComponent(new TextComponent("HELLO" + ChatColor.RED));
-        e.setResponse(serverPing);
+        event.setResponse(serverPing);
     }
 }

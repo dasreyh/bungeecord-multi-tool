@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.weirtz</groupId>
-    <artifactId>bungeecord-server-tab</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>bungeecord-multi-tool</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Bungeecord Server Tab</name>
+    <name>Bungeecord Multi-Tool</name>
 
-    <description>Custom server tab menus for bungeecord servers.</description>
+    <description>An Assortment of Bungeecord server features.</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
