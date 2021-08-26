@@ -3,7 +3,10 @@
 # BUNGEECORD MULTI-TOOL PLUGIN
 **AN ASSORTMENT OF BUNGEECORD FEATURES FOR YOUR SERVER**
 
+
+
 ### Current features:
+<hr>
 #### Custom Tab Menus
 
 <img align="left" width="400px" style="display:block;verticle-align:top;" src="https://i.imgur.com/QeWxkl5.png">
