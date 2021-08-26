@@ -3,12 +3,12 @@
 
 ### Current features:
 #### Custom Tab Menus
-<img align="left" width="400px" style="display:block;" src="https://i.imgur.com/QeWxkl5.png">
+<img align="left" width="400px" style="display:block;verticle-align:top;" src="https://i.imgur.com/QeWxkl5.png">
 
 
 
 
 #### Custom MOTDS
-<img align="left" width="400px" style="display:block;" src="https://i.imgur.com/jo0lj71.png">
+<img align="left" width="400px" style="display:block;verticle-align:top;" src="https://i.imgur.com/jo0lj71.png">
 
 
