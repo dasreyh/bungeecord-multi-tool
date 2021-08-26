@@ -5,7 +5,7 @@
 
 
 
-### Current features:
+### CURRENT FEATURES
 <hr>
 #### Custom Tab Menus
 
