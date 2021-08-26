@@ -20,6 +20,9 @@ public final class Main extends Plugin implements Listener {
     public void onEnable() {
         //Register listener for player login events.
         ProxyServer.getInstance().getPluginManager().registerListener(this,this);
+
+        //Register for MOTD Listener.
+        ProxyServer.getInstance().getPluginManager().registerListener(this, new MotdListener());
     }
 
     @Override
