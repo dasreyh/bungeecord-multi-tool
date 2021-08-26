@@ -19,38 +19,14 @@ public final class Main extends Plugin implements Listener {
     @Override
     public void onEnable() {
         //Register listener for player login events.
-        ProxyServer.getInstance().getPluginManager().registerListener(this,this);
+        ProxyServer.getInstance().getPluginManager().registerListener(this,new TabListener());
 
         //Register for MOTD Listener.
         ProxyServer.getInstance().getPluginManager().registerListener(this, new MotdListener());
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
-
-
-
-    @EventHandler
-    public void onPostLogin(final PostLoginEvent event){
-        ProxiedPlayer player = event.getPlayer();
-
-        player.setTabHeader(
-                //Set Header
-                new ComponentBuilder(" \n").color(ChatColor.WHITE)
-                        .append("You're playing on ").color(ChatColor.GOLD)
-                        .append("MC.FINITESKIES.COM").bold(true).color(ChatColor.LIGHT_PURPLE)
-                        .append(" \n").bold(false).color(ChatColor.WHITE)
-                        .create(),
-                //Set Footer
-                new ComponentBuilder(" \n").color(ChatColor.WHITE)
-                        .append( "Visit us at ").color(ChatColor.WHITE)
-                        .append( "finiteskies.com ").color(ChatColor.LIGHT_PURPLE).bold(true)
-                        .append("for awesome perks!").color(ChatColor.WHITE).bold(false)
-                        .append(" \n").color(ChatColor.WHITE)
-                        .create()
-        );
-
-    }
+//    @Override
+//    public void onDisable() {
+//        // Plugin shutdown logic
+//    }
 }
