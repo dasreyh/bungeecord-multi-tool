@@ -1,4 +1,4 @@
-<img width="400px" align="center" src="https://i.imgur.com/B8hRJBh.png">
+<img width="400px" src="https://i.imgur.com/B8hRJBh.png">
 
 # BUNGEECORD MULTI-TOOL PLUGIN
 **AN ASSORTMENT OF BUNGEECORD FEATURES FOR YOUR SERVER**
