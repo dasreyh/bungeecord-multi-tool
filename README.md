@@ -3,8 +3,11 @@
 
 ### Current features:
 Custom Tab Menus
-![Tab Menu](https://i.imgur.com/QeWxkl5.png)
+<br>
+<img align="left" src="https://i.imgur.com/QeWxkl5.png">
 
 Custom MOTDS
-![MOTD](https://i.imgur.com/jo0lj71.png)
+<br>
+<img align="left" src="https://i.imgur.com/jo0lj71.png">
+
 
